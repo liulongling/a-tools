@@ -1,0 +1,12 @@
+[*]
+charset = utf-8
+end_of_line = lf
+insert_final_newline = false
+indent_style = space
+indent_size = 4
+
+[*.{html, xml, yaml, fxml}]
+indent_size = 2
+
+[*.java]
+ij_any_blank_lines_around_field = 1

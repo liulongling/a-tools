@@ -1,0 +1,54 @@
+.app-layout .app-item {
+    -fx-pref-width: 150;
+    -fx-min-width: -fx-pref-width;
+    -fx-max-width: -fx-pref-width;
+    -fx-pref-height: 100;
+    -fx-min-height: -fx-pref-height;
+    -fx-background-color: #494949;
+    -fx-background-radius: 5;
+    -fx-padding: 5 5 10 5;
+    -fx-border-color: transparent;
+    -fx-border-style: solid;
+    -fx-border-width: 1;
+    -fx-border-radius: 5;
+    -fx-cursor: hand;
+}
+
+.app-layout .app-item:hover {
+    -fx-border-color: #a0bde3;
+}
+
+.app-layout .app-item .hyperlink {
+    -fx-padding: 0;
+}
+
+.app-layout .app-item .app-item-title {
+    -fx-font-weight: bold;
+    -fx-padding: 0 5;
+    -fx-text-fill: #FFFFFF;
+}
+
+.app-layout .app-item.placeholder {
+}
+
+.app-category-title {
+    -fx-font-weight: bold;
+    -fx-text-fill: #AAAAAA;
+}
+
+.app-category {
+    -fx-padding: 10 10 15 10;
+}
+
+.search-text {
+    -fx-background-color: none;
+    -fx-border-width: 0 0 1 0;
+    -fx-border-color: #AAAAAA;
+    -fx-text-fill: #FFFFFF;
+}
+
+.search-text:focused {
+    -fx-background-color: none;
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+}

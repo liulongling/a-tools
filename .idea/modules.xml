@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/a-shardingjdbc/a-Shardingjdbc.iml" filepath="$PROJECT_DIR$/a-shardingjdbc/a-Shardingjdbc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/a-tool/a-tool.iml" filepath="$PROJECT_DIR$/a-tool/a-tool.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tool-server.iml" filepath="$PROJECT_DIR$/tool-server.iml" />
+    </modules>
+  </component>
+</project>

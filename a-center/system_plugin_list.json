@@ -1,0 +1,38 @@
+[
+    {
+        "bundleName": "locale.ShardingJdbc",
+        "controllerType": "Node",
+        "downloadUrl": "",
+        "fxmlPath": "/com/liulongling/tool/fxmlView/developTools/ShardingJdbc.fxml",
+        "isDownload": true,
+        "isEnable": true,
+        "isFavorite": false,
+        "isMenu": true,
+        "jarName": "a-Shardingjdbc",
+        "localVersionNumber": 1,
+        "menuParentTitle": "littleTools",
+        "name": "分库分表工具",
+        "synopsis": "",
+        "title": "分库分表工具",
+        "version": "0.0.1",
+        "versionNumber": 1
+    },
+    {
+        "bundleName": "locale.JExcel",
+        "controllerType": "Node",
+        "downloadUrl": "",
+        "fxmlPath": "/com/liulongling/tool/fxmlView/littleTools/JExcel.fxml",
+        "isDownload": true,
+        "isEnable": true,
+        "isFavorite": false,
+        "isMenu": true,
+        "jarName": "a-JExcel",
+        "localVersionNumber": 1,
+        "menuParentTitle": "littleTools",
+        "name": "JExcel工具",
+        "synopsis": "",
+        "title": "JExcel工具",
+        "version": "0.0.1",
+        "versionNumber": 1
+    }
+]

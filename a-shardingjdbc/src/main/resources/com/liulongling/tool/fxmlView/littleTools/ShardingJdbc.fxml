@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="531.0" prefWidth="979.0" xmlns="http://javafx.com/javafx/8.0.171"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.liulongling.tool.controller.ShardingJdbcController">
+    <children>
+        <BorderPane layoutX="14.0" layoutY="7.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0"
+                    AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+            <top>
+                <SplitPane dividerPositions="0.75, 0.25" BorderPane.alignment="CENTER">
+                    <items>
+                        <VBox alignment="TOP_CENTER">
+                            <children>
+                                <HBox alignment="CENTER_LEFT" spacing="5.0">
+                                    <children>
+                                        <Label text="输入sql语句，表名记得添加符号``哦"/>
+                                    </children>
+                                    <VBox.margin>
+                                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
+                                    </VBox.margin>
+                                </HBox>
+                                <TextArea fx:id="textAreaSql"
+                                          promptText=""
+                                          VBox.vgrow="ALWAYS"/>
+                            </children>
+                        </VBox>
+                        <VBox alignment="TOP_CENTER">
+                            <children>
+                                <HBox alignment="CENTER_LEFT" spacing="5.0">
+                                    <children>
+                                        <Label text="输入参数"/>
+                                    </children>
+                                    <VBox.margin>
+                                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
+                                    </VBox.margin>
+                                </HBox>
+                                <TextArea fx:id="textAreaFindDBById" promptText="多个参数用','分割"
+                                          VBox.vgrow="ALWAYS"/>
+                            </children>
+                        </VBox>
+                    </items>
+                </SplitPane>
+            </top>
+            <center>
+                <TableView fx:id="tableViewMain" editable="true" BorderPane.alignment="CENTER">
+                    <columns>
+                        <TableColumn fx:id="tableColumnDBOriginalPath" prefWidth="250.0" sortable="false"
+                                     text="数据源路径"/>
+                        <TableColumn fx:id="tableColumnViewDBOriginalPath" minWidth="0.0" prefWidth="42.0"
+                                     sortable="false" text="查看"/>
+                        <TableColumn fx:id="tableColumnDBTargetPath" prefWidth="282.0" sortable="false"
+                                     text="目标路径"/>
+                        <TableColumn fx:id="tableColumnViewDBTargetPath" prefWidth="68.0" sortable="false"
+                                     text="查看"/>
+                        <TableColumn fx:id="tableColumnRun" prefWidth="68.0" sortable="false" text="操作1"/>
+                        <TableColumn fx:id="tableColumnRunToDB" prefWidth="68.0" sortable="false" text="操作2"/>
+                    </columns>
+                    <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY"/>
+                    </columnResizePolicy>
+                </TableView>
+            </center>
+            <bottom>
+                <HBox alignment="CENTER" spacing="5.0" BorderPane.alignment="CENTER">
+                    <children>
+                        <Label text="数据源路径："/>
+                        <TextField fx:id="textFieldDBOriginalPath"/>
+                        <Button fx:id="buttonChooseOriginalPath" mnemonicParsing="false"
+                                onAction="#chooseOriginalPathAction" text="选择"/>
+                        <Label text="目标路径："/>
+                        <TextField fx:id="textFieldDBTargetPath"/>
+                        <Button fx:id="buttonChooseTargetPath" mnemonicParsing="false"
+                                onAction="#chooseTargetPathAction" text="选择"/>
+                    </children>
+                    <children>
+                        <Button fx:id="buttonSaveConfigure" mnemonicParsing="false" onAction="#saveConfigure"
+                                text="保存配置"/>
+                        <Button fx:id="otherSaveConfigureButton" mnemonicParsing="false"
+                                onAction="#otherSaveConfigureAction" text="配置另存为"/>
+                        <Button fx:id="loadingConfigureButton" mnemonicParsing="false"
+                                onAction="#loadingConfigureAction" text="加载配置"/>
+                        <Button fx:id="buttonDeleteSelectRow" mnemonicParsing="false" onAction="#deleteSelectRowAction"
+                                text="删除选中行"/>
+                    </children>
+                    <BorderPane.margin>
+                        <Insets/>
+                    </BorderPane.margin>
+                </HBox>
+            </bottom>
+        </BorderPane>
+    </children>
+</AnchorPane>
